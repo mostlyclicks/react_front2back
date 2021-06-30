@@ -1,28 +1,26 @@
-import React, { Component } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 
-class UserItem  extends Component {
 
-    // Now coming from Users props
-    // state = {
-    //     id: 'id',
-    //     login: 'mostlyclicks',
-    //     avatar_url: 'https://avatars.githubusercontent.com/u/26814?v=4',
-    //     html_url: 'https://github.com/mostlyclicks'
-    // }
+const UserItem = ({ user: {login, avatar_url, html_url}}) => {
 
-    render() {
-
-        const { login, avatar_url, html_url } = this.props.user
-        return (
-            <div className="card text-center">
-                <img src={avatar_url} alt="" className="round-img" style={{width: '60px'}}/>
-                <h3>{login}</h3>
-                <div>
-                    <a href={html_url} className="btn btn-dark btn-sm my-1">More</a>
-                </div>
+    return (
+        <div className="card text-center">
+            <img src={avatar_url} alt="" className="round-img" style={{width: '60px'}}/>
+            <h3>{login}</h3>
+            <div>
+                <a href={html_url} className="btn btn-dark btn-sm my-1">More</a>
             </div>
-        )
-    }
+        </div>
+    )
+}
+
+UserItem.propTypes = {
+    user: PropTypes.object.isRequired
+    //do this an object as above to include all
+    // login: PropTypes.string.isRequired,
+    // avatar_url: PropTypes.string.isRequired,
+    // html_url: PropTypes.string.isRequired
 }
 
 export default UserItem
