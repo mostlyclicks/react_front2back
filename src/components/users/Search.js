@@ -1,7 +1,6 @@
 import React, { useState }  from 'react'
 import PropTypes from 'prop-types'
 
-
 const Search = ({ searchUsers, clearUsers, showClear, setAlert }) => {
 
   const [text, setText] = useState('')
@@ -18,7 +17,6 @@ const Search = ({ searchUsers, clearUsers, showClear, setAlert }) => {
       searchUsers(text)
       setText('')
     }
-    
   }
 
     return (
