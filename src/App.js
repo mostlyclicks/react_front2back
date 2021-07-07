@@ -38,12 +38,7 @@ const App = () => {
     setLoading(false)
   }
 
-  // Clear users
-  const clearUsers = () => {
-    // this.setState({ users: [], loading: false })
-    setUsers([])
-    setLoading(false)
-  }
+ 
 
   const showAlert = ( msg, type ) => {
     setAlert({msg, type})
@@ -61,9 +56,6 @@ const App = () => {
             <Route exact path="/" render={props => (
               <Fragment>
                 <Search 
-                  
-                  clearUsers={clearUsers}
-                  showClear={ users.length > 0 ? true : false }
                   setAlert={showAlert}
                 />
                 <Users />
