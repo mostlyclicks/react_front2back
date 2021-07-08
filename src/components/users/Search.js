@@ -41,7 +41,6 @@ const Search = () => {
             Clear
           </button>
         }
-        
       </div>
     )
   

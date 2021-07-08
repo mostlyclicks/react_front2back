@@ -11,9 +11,6 @@ const AlertState = props => {
 
   const [state, dispatch] = useReducer(AlertReducer, initialState)
 
- //Set Alert
-   
-
   const setAlert = ( msg, type ) => {
     dispatch({
       type: SET_ALERT,
